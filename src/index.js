@@ -4,6 +4,9 @@ import './index.css';
 import './icon.css'
 import App from './component/App/App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+axios.defaults.baseURL = "http://192.168.2.120:10010/"; 
+React.Component.prototype.axios = axios;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -29,7 +29,7 @@ class Router extends React.Component {
         ]
     }
     init() {
-        console.log(this.props.routes);
+       
         let { routes } = this.props;
         this.routerObj = {};
         for (let i in routes) {
@@ -74,7 +74,6 @@ class Router extends React.Component {
     }
     getComponentChain() {
         let path = this.getPath();
-        console.log(path)
         return path.split('/');
     }
     render() {

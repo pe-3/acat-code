@@ -1,0 +1,27 @@
+.que-top-bar{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 16px;
+}
+
+.q-top-select{
+    /* border: 1px solid rgb(200,200,200); */
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f3f4;
+    margin: 0 10px;
+    flex: 1;
+    border-radius: 8px;
+}
+
+.q-top-input{
+    flex: 3;
+    height: 30px;
+}
+
+.q-top-btn{
+    height: 30px;
+    line-height: 30px;
+    flex: 2;
+}

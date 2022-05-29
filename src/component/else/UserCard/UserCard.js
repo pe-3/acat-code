@@ -1,13 +1,20 @@
 import React from "react"
-
+import './UserCard.css'
 class UserCard extends React.Component {
-
+    
     render() {
+        let {hideCard} = this.props;
         return (
-            <div id='UserCard'>
-                <UserInfo />
-                <UserMenu />
-                <UserMenuMore />
+            <div id="UserCardCurtain" onClick={()=>{
+                hideCard();
+            }}>
+                <div id='UserCard' onClick={(e)=>{
+                    e.stopPropagation();
+                }}>
+                    <UserInfo />
+                    <UserMenu />
+                    <UserMenuMore />
+                </div>
             </div>
         )
     }
@@ -38,27 +45,27 @@ class UserInfo extends React.Component {
 class UserMenu extends React.Component {
     list = [
         {
-            icon:require("../../../assets/img/UserMenuIconPic/starred-2e4c5ddcac0ba3a09087d8ff98eff50c.png"),
+            icon: require("../../../assets/img/UserMenuIconPic/starred-2e4c5ddcac0ba3a09087d8ff98eff50c.png"),
             menuText: "收藏夹",
         },
         {
-            icon:require("../../../assets/img/UserMenuIconPic/notebook-92e90c87d33d7403f2f016c245b203a7.png"),
+            icon: require("../../../assets/img/UserMenuIconPic/notebook-92e90c87d33d7403f2f016c245b203a7.png"),
             menuText: "笔记本",
         },
         {
-            icon:require("../../../assets/img/UserMenuIconPic/answer-9dab99b273b399a43f8826c193d187d5.png"),
+            icon: require("../../../assets/img/UserMenuIconPic/answer-9dab99b273b399a43f8826c193d187d5.png"),
             menuText: "我的题解",
         },
         {
-            icon:require("../../../assets/img/UserMenuIconPic/feedback.6ed8deff.png"),
+            icon: require("../../../assets/img/UserMenuIconPic/feedback.6ed8deff.png"),
             menuText: "我的讨论",
         },
         {
-            icon:require("../../../assets/img/UserMenuIconPic/progress-106c8d8956a5f08d22006a6ea911e6c3.png"),
+            icon: require("../../../assets/img/UserMenuIconPic/progress-106c8d8956a5f08d22006a6ea911e6c3.png"),
             menuText: "做题分析",
         },
         {
-            icon:require("../../../assets/img/UserMenuIconPic/session-8dc060863ecf9d6f77c4c9a2963ea6ff.png"),
+            icon: require("../../../assets/img/UserMenuIconPic/session-8dc060863ecf9d6f77c4c9a2963ea6ff.png"),
             menuText: "进度分析",
         },
     ]

@@ -13,6 +13,13 @@
       "unicode_decimal": 983420
     },
     {
+      "icon_id": "76992",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "f00d9",
+      "unicode_decimal": 983257
+    },
+    {
       "icon_id": "278744",
       "name": "下箭头",
       "font_class": "xiajiantou",

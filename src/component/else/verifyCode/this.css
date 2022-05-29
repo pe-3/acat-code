@@ -1,0 +1,8 @@
+.imgWrapper{
+    width: 100%;
+}
+
+.imgWrapper>img{
+    width: 100%;
+    border-radius: 8px;
+}
