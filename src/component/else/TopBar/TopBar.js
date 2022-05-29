@@ -1,12 +1,12 @@
 import React from 'react';
 import SignOrLogin from "../SignOrLogin/SignOrLogin";
 import UserCard from "../UserCard/UserCard";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,useLocation} from 'react-router-dom'
 class MenuList extends React.Component {
     list = [
         {
             content: '学习',
-            path: '/',
+            path: '/Learn',
         },
         {
             content: '题库',
@@ -14,31 +14,28 @@ class MenuList extends React.Component {
         },
         {
             content: '讨论',
-            path: '/Discuss',
+            path: '/Disscuss',
         },
         {
             content: '竞赛',
-            path: 'competition',
+            path: '/competition',
         },
     ]
 
-    jump = (path)=>{
-        let history = useNavigate();
-        history(path);
-    }
 
     state = { seletIndex: null, }
     render() {
+        let {jump, pathname} = this.props;
         return (
             <div className='MenuList'>
                 <ul>
-                    <li onClick={() => { this.setState({ seletIndex: null }); this.jump('/'); }}>
+                    <li onClick={() => {  jump('/'); }}>
                         <img src="./assets/img/logo.jpeg" alt="" className="logo" />
-                        <span id="itemName" className={this.state.seletIndex === null ? "selectItemName" : ''}>ACAT_CODE</span>
+                        <span id="itemName" className={pathname === '/' ? "selectItemName" : ''}>ACAT_CODE</span>
                     </li>
                     {this.list.map((val, index) => {
                         return (
-                            <li key={index} className={this.state.seletIndex === index ? 'selectMenu selectItemName' : ''} onClick={() => { this.setState({ seletIndex: index }); this.jump(val.path); }}>{val.content}</li>
+                            <li key={index} className={pathname === val.path ? 'selectMenu selectItemName' : ''} onClick={() => { jump(val.path); }}>{val.content}</li>
                         )
                     })}
                 </ul>
@@ -46,6 +43,17 @@ class MenuList extends React.Component {
         )
     }
 }
+function Menu(){
+    let history = useNavigate();
+    let jump = (path)=>{
+        history(path);
+    }
+    let location = useLocation();
+    return (
+        <MenuList jump={jump} pathname = {location.pathname}/>
+    )
+}
+
 
 class UserBar extends React.Component {
     state = { isShow: false, isLogged: true }
@@ -83,7 +91,7 @@ class TopBar extends React.Component {
     render() {
         return (
             <div id='TopBar' className='layout'>
-                <MenuList />
+                <Menu/>
                 <UserBar />
             </div>
         )

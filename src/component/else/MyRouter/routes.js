@@ -3,8 +3,7 @@ import Learn from "../Learn/Learn";
 import Qlist from "../Qlist/Qlist";
 import Disscuss from "../Disscuss/Disscuss";
 import Competition from "../Competiton/Competition";
-
-export default [
+const routes = [
     {
         path:"/",
         element:<Index/>,
@@ -26,3 +25,4 @@ export default [
         element:<Competition/>,
     },
 ]
+export default routes
