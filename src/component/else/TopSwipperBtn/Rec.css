@@ -1,0 +1,88 @@
+.pb-3 {
+    padding-bottom: 0.75rem;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.text-label-2 {
+    color: rgba(38,38,38,.75);
+}
+.font-medium {
+    font-weight: 500;
+}
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.text-ellipsis, .truncate {
+    text-overflow: ellipsis;
+}
+.truncate {
+    overflow: hidden;
+    white-space: nowrap;
+}
+h1, h2, h3, h4, h5, h6 {
+    --tw-text-opacity: 1;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+.ml-auto {
+    margin-left: auto;
+}
+
+.text-label-2 {
+    color: rgba(38,38,38,.75);
+}
+.text-\[24px\] {
+    font-size: 19px;
+}
+
+.bg-fill-4 {
+    background-color: rgba(0,10,32,.03);
+}
+.rounded {
+    border-radius: 5px;
+}
+button, button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+[role=button], button {
+    cursor: pointer;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+#my-btn{
+    margin: 0 4px;
+    border: none;
+}
+
+#my-btn:hover{
+    background-color: rgba(0,10,32,.05);
+}

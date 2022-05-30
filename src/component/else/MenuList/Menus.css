@@ -1,0 +1,34 @@
+.Menus>ul>li{
+    height: 48px;
+    line-height: 48px;
+    min-width: 84px;
+    color: rgb(140,140,140);
+    /* text-align: center; */
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.Menus>ul{
+    width: 100%;
+
+    list-style: none;
+    border-top: 1px solid rgba(0,10,32,0.14);
+}
+
+.menu-icon{
+    margin-right: 10px;
+}
+
+.iconfont{
+    width: 1em;
+    display: inline-block;
+}
+
+.icon-safety::before{
+    font-size: 22px;
+    margin-left: -3.4px;
+}
+.icon-safety{
+    transform: translate(0,3px);
+}

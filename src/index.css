@@ -1,90 +1,111 @@
 /* 重置代码 */
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-em{
+em {
   font-style: normal;
   color: coral;
 }
+
 /* 顶部栏部分 */
-#TopBar{
+#TopBar {
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   user-select: none;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px 0px;
+  background-color: #fff;
 }
-.layout{
+
+.layout {
   width: 100vw;
   box-sizing: border-box;
   padding: 0 150px;
   margin-bottom: 20px;
 }
-.MenuList{
+
+.MenuList {
   height: 100%;
 }
-ul{
+
+.MenuList>ul {
   display: flex;
   list-style: none;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.MenuList>ul>li{
+
+.MenuList>ul>li {
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
-  color: rgba(38,38,38,.75);
+  color: rgba(38, 38, 38, .75);
   cursor: pointer;
   box-sizing: border-box;
 }
-.MenuList>ul>li:hover{
+
+.MenuList>ul>li:hover {
   color: black;
 }
-.logo{
+
+.logo {
   height: 100%;
   vertical-align: middle;
   box-sizing: border-box;
   padding: 10px;
 }
 
-#itemName{
+#itemName {
   color: black;
   font-weight: bold;
 }
 
-.selectMenu{
+.selectMenu {
   border-bottom: 1.5px solid;
-  border-color:#000;
+  border-color: #000;
 }
 
-.selectItemName{
-  animation: colroChange linear 2s infinite alternate ;
+.selectItemName {
+  animation: colroChange linear 2s infinite alternate;
 }
 
 @keyframes colroChange {
-  0% {color: rgb(48, 199, 236);}
-  25% {color: rgb(249, 145, 133);}
-  50% {color: #d4fc79;}
-  70% {color: rgb(197, 197, 29);}
+  0% {
+    color: rgb(48, 199, 236);
+  }
+
+  25% {
+    color: rgb(249, 145, 133);
+  }
+
+  50% {
+    color: #d4fc79;
+  }
+
+  70% {
+    color: rgb(197, 197, 29);
+  }
 }
 
-.Logged,#UserBar{
+.Logged,
+#UserBar {
   height: 100%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 180px;
   position: relative;
 }
 
-.userAvatar{
+.userAvatar {
   height: 100%;
 }
-.userAvatar>img{
+
+.userAvatar>img {
   height: 100%;
   box-sizing: border-box;
   padding: 10px;
@@ -93,180 +114,188 @@ ul{
 }
 
 
-#UserBar>i{
+#UserBar>i {
   cursor: pointer;
   color: #999;
   padding: 10px;
   border-radius: 5px;
 }
-#UserBar>i:hover{
-  background-color: rgba(100,100,100,.1);
+
+#UserBar>i:hover {
+  background-color: rgba(100, 100, 100, .1);
   color: rgb(105, 78, 78);
 }
 
 /* 用户卡片 */
 
 
-#UserInfo{
+#UserInfo {
   display: flex;
   height: 70px;
   align-items: center;
 }
 
-.bigAvatar{
+.bigAvatar {
   margin-right: 5px;
 }
 
-.bigAvatar>img{
+.bigAvatar>img {
   padding: 5px;
 }
 
-.nickName{
+.nickName {
   font-size: 1.25rem;
   font-weight: 600;
   height: 35px;
   line-height: 48px;
 }
 
-.userSign{
+.userSign {
   font-size: 12px;
   height: 35px;
   line-height: 35px;
 }
 
-#UserMenu{
+#UserMenu {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 0;
 }
 
-.menuItem{
-  width:30%;
-  padding:5px 10px;
+.menuItem {
+  width: 30%;
+  padding: 5px 10px;
   box-sizing: border-box;
-  background-color: rgba(150,150,150,.1);
+  background-color: rgba(150, 150, 150, .1);
   font-size: 12.5px;
-  margin:2% 1.6%;
+  margin: 2% 1.6%;
   border-radius: 7px;
   display: grid;
   place-content: center;
 }
-.menuItem:hover{
-  background-color: rgba(100,100,100,.1);
-}
-.menuIcon{
-  width: 100%;
-}
-.menuIcon>img{
-  width: 100%;
-  box-sizing: border-box;
-  padding:5px 10px;
-}
-.menutext{
-  text-align: center;
-  color: rgba(38,38,38,.75);
+
+.menuItem:hover {
+  background-color: rgba(100, 100, 100, .1);
 }
 
-.listMenu{
-  padding:0.2em 0.5rem;
+.menuIcon {
+  width: 100%;
+}
+
+.menuIcon>img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+.menutext {
+  text-align: center;
+  color: rgba(38, 38, 38, .75);
+}
+
+.listMenu {
+  padding: 0.2em 0.5rem;
   border-radius: 5px;
   height: 30px;
   line-height: 30px;
   font-size: 14px;
   display: flex;
   align-items: center;
- margin-top: 5px;
+  margin-top: 5px;
 }
 
-.listIcon{
+.listIcon {
   margin-right: 10px;
-  color: rgba(25,34,34,.7);
+  color: rgba(25, 34, 34, .7);
   vertical-align: middle;
 }
 
-.listMenu:hover{
-  background-color:rgba(200,200,200,.1);
+.listMenu:hover {
+  background-color: rgba(200, 200, 200, .1);
 }
 
 
 
-.Qhead,.singleQue{
+.Qhead,
+.singleQue {
   font-size: 14px;
-  color: rgba(60,60,67,.6);
+  color: rgba(60, 60, 67, .6);
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   height: 43px;
   line-height: 43px;
 }
-.Qhead> span,.singleQue>span{
+
+.Qhead>span,
+.singleQue>span {
   width: 20%;
   display: inline-block;
   box-sizing: border-box;
   padding-left: 10px;
 }
 
-.singleQue{
-  border:none;
+.singleQue {
+  border: none;
 }
 
-.singleQue:nth-child(odd){
-  background-color: rgba(150,150,150,.1);
+.singleQue:nth-child(odd) {
+  background-color: rgba(150, 150, 150, .1);
 }
 
-.Qhead> span:nth-child(1),
-.Qhead> span:nth-child(5),
+.Qhead>span:nth-child(1),
+.Qhead>span:nth-child(5),
 .singleQue>span:nth-child(1),
-.singleQue>span:nth-child(5)
-{
+.singleQue>span:nth-child(5) {
   width: 5%;
 }
 
-.Qhead> span:nth-child(2),
-.singleQue>span:nth-child(2){
+.Qhead>span:nth-child(2),
+.singleQue>span:nth-child(2) {
   width: 50%;
   box-sizing: border-box;
   padding-left: 10%;
 }
 
-.emptyRouter{
+.emptyRouter {
   text-align: center;
 }
 
-.SignOrLogin{
+.SignOrLogin {
   font-size: 13px;
   color: rgb(140, 140, 140);
   position: relative;
 }
+
 .SignBtn,
-.loginBtn{
+.loginBtn {
   font-size: 14px;
-  color: rgba(90,90,90);
+  color: rgba(90, 90, 90);
   cursor: pointer;
 }
 
-.SignOrLogin>span{
+.SignOrLogin>span {
   margin-left: 15px;
   vertical-align: middle;
 }
 
-.Curtain{
+.Curtain {
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  color:#000;
+  color: #000;
   z-index: 9999;
 }
 
-.Card{
+.Card {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  
+  transform: translate(-50%, -50%);
+
   border-radius: 21px;
   background-color: #fff;
 
@@ -277,87 +306,88 @@ ul{
   padding: 24px 32px;
 }
 
-.LogWrapper{
+.LogWrapper {
   margin-bottom: 24px;
   margin-top: 30px;
   height: 80px;
   overflow: hidden;
 }
 
-.PjName{
+.PjName {
   font-size: 45px;
-  font-weight:340;
+  font-weight: 340;
   vertical-align: middle;
   letter-spacing: 4px;
 }
 
-.log-login{
+.log-login {
   margin-top: 5px;
   margin-left: -15px;
 }
 
-.re-input{
+.re-input {
   display: flex;
   align-items: center;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
   box-sizing: border-box;
-  padding: 5px 14px; 
+  padding: 5px 14px;
   position: relative;
 }
 
-.re-input>input{
+.re-input>input {
   height: 100%;
   border: none;
   outline: none;
   color: #000;
   font-size: 15px;
-  letter-spacing: .6px ;
- 
+  letter-spacing: .6px;
+
 }
 
-.re-input>input::placeholder{
+.re-input>input::placeholder {
   font-size: 14.5px;
-  color: rgb(140,140,140);
-  letter-spacing: .2px ;
+  color: rgb(140, 140, 140);
+  letter-spacing: .2px;
 }
 
-.pre-select{
+.pre-select {
   border-right: 1px solid #e5e5e5;
   margin-right: 10px;
   padding-right: 6px;
 }
 
-.sub-select{
+.sub-select {
   border-left: 1px solid #e5e5e5;
   margin-left: 10px;
   padding-left: 6px;
 }
 
-.re-select,.re-button{
+.re-select,
+.re-button {
   height: 70%;
   flex: 1.5;
-  color:rgba(38,38,38,0.75);
+  color: rgba(38, 38, 38, 0.75);
   font-size: 14px;
   letter-spacing: .2px;
   text-align: center;
   position: relative;
 }
 
-.re-input>input{
+.re-input>input {
   flex: 2.5;
 }
 
-.icon-xiajiantou{
+.icon-xiajiantou {
   font-size: 10px !important;
   font-weight: bolder;
 }
 
-.select-drop-down{
+.select-drop-down {
   position: absolute;
   width: calc(100% + 2px);
   background-color: white;
-  left:-1px;
+  left: -1px;
   top: calc(100% + 6px);
   border-radius: 10px;
   z-index: 9999;
@@ -365,7 +395,7 @@ ul{
   padding: 10px 0;
 }
 
-.selectItem{
+.selectItem {
   color: rgba(38, 38, 38, 0.75);
   font-weight: normal;
   font-size: 14px;
@@ -378,11 +408,11 @@ ul{
   position: relative;
 }
 
-.selectItem:hover{
-  background-color: rgba(200,200,200,.1);
+.selectItem:hover {
+  background-color: rgba(200, 200, 200, .1);
 }
 
-.icon-duihao{
+.icon-duihao {
   color: rgb(0, 122, 255);
   font-size: 10px !important;
   float: right;
@@ -390,15 +420,15 @@ ul{
   right: 10px;
 }
 
-.mail-suffix{
+.mail-suffix {
   width: 6em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.closeBtn{
+.closeBtn {
   position: absolute;
- 
+
   font-size: 24px;
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -407,7 +437,7 @@ ul{
   right: -30px;
 }
 
-.prompt{
+.prompt {
   color: rgba(38, 38, 38, 0.75);
   display: flex;
   justify-content: space-between;
@@ -416,7 +446,7 @@ ul{
 }
 
 
-.xieyi{
+.xieyi {
   color: rgba(60, 60, 67, 0.6);
   font-size: 12px;
   text-align: center;
@@ -426,17 +456,29 @@ ul{
   margin-top: 20px;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-.re-button,.re-select{
+.re-button,
+.re-select {
   cursor: pointer;
 }
-.prompt>span{
+
+.prompt>span {
   cursor: pointer;
 }
-input{
+
+input {
   background-color: transparent;
+}
+
+#App,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+  background-color: #f7f8fa;
 }

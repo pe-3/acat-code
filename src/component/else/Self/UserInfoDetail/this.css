@@ -1,0 +1,128 @@
+.userInfoDetaio{
+    padding: 16px 20px;
+    margin: 0px -20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    height: 178px;
+    box-sizing: border-box;
+}
+
+.userInfoDetaio:hover{
+    box-shadow: rgb(0 0 0 / 4%) 0px 1px 3px, rgb(0 0 0 / 12%) 0px 6px 16px;
+}
+
+.userInfoDetaio:hover>.css-bdk8zz-BaseButtonComponent-Button{
+    display: inline-flex;
+}
+
+.top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.info-wrapper{
+    flex:1;
+}
+
+.nick-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 24px;
+    line-height: 32px;
+    height: 32px;
+    font-weight: 500;
+    color: rgba(38,38,38, 1);
+    display: flex;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.sex-icon{
+    color: rgba(0,122,255,1);
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.info-else,.info-more{
+    display: flex;
+    color: rgba(60,60,67,0.6);
+    height: 30px;
+    line-height: 30px;
+    padding-left: 14px;
+    align-items: center;
+}
+
+.info-else>span,
+.info-more>span{
+    flex: 1;
+    font-size: 14px;
+    border-right: 1px solid rgba(240,240,240,1);
+    margin-right: 24px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.info-else>span:last-child,
+.info-more>span:last-child{
+    border: none;
+}
+
+
+.info-val{
+    color: rgb(38,38,38);
+    margin-left: 16px;
+}
+
+.info-avatar{
+    height: 60px;
+    width: 60px;
+}
+.info-avatar>img{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgb(240,240,240);
+}
+
+.info-more>span>svg{
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.info-more{
+    margin-top: 5px;
+}
+
+.stu-num{
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.signature2{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    padding-left: 15px;
+    color: rgba(38,38,38,0.75);
+    font-size: 14.3px;
+}
+
+.signature>span{
+    color: rgba(38,38,38,1);
+}
+
+.girl{
+    color: rgb(255,45,85);
+}
+
+.edit-position{
+    position: absolute;
+    bottom: 16px;
+    right: 40px;
+}

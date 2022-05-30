@@ -1,0 +1,76 @@
+.css-1cynnc9-layer1-CardContainer {
+    background: #fff;
+    width: 100%;
+    padding: 20px 20px 24px;
+    border-radius: 3px;
+    min-height: 164px;
+}
+
+.css-1ubvqxx-CardHeader {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px -20px;
+    padding: 0px 20px 14px;
+    border-bottom: 1px solid rgba(240,240,240, 1);
+}
+
+.css-1ubvqxx-CardHeader > svg {
+    width: 24px;
+    height: 24px;
+    color: rgba(0,122,255, 1);
+    margin-right: 4px;
+}
+
+.css-1ubvqxx-CardHeader > span {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: rgba(38,38,38, 1);
+}
+
+.css-ii34ak-Container {
+    margin-top: 30px;
+    padding:0 20px;
+    box-sizing: border-box;
+}
+
+.css-1le0wck-Tip {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(60,60,67,0.3);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.css-1vx0c7w-BaseButtonComponent-PrimaryButton {
+    border: none;
+    line-height: 20px;
+    outline: none;
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition-property: color, box-shadow, background-color, opacity;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    opacity: 1;
+    color: rgba(255,255,255, 1);
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: rgba( 0,122,255, 1);
+}
+
+.css-bk2vgr-Text {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(60,60,67,0.6);
+    margin-top: 12px;
+    text-align: center;
+}

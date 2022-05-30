@@ -4,6 +4,7 @@ class UserCard extends React.Component {
     
     render() {
         let {hideCard} = this.props;
+        let {jump} = this.props;
         return (
             <div id="UserCardCurtain" onClick={()=>{
                 hideCard();
@@ -11,9 +12,9 @@ class UserCard extends React.Component {
                 <div id='UserCard' onClick={(e)=>{
                     e.stopPropagation();
                 }}>
-                    <UserInfo />
+                    <UserInfo jump={jump} hideCard={hideCard}/>
                     <UserMenu />
-                    <UserMenuMore />
+                    <UserMenuMore jump={jump} hideCard = {hideCard}/>
                 </div>
             </div>
         )
@@ -28,8 +29,12 @@ class UserInfo extends React.Component {
         sign: "好好学习，天天向上",
     }
     render() {
+
         return (
-            <div id='UserInfo'>
+            <div id='UserInfo' onClick={()=>{
+                this.props.jump('/Self');
+                this.props.hideCard();
+            }}>
                 <div className="userAvatar bigAvatar">
                     <img src={this.userInfo.avatar} alt="" />
                 </div>
@@ -70,6 +75,7 @@ class UserMenu extends React.Component {
         },
     ]
     render() {
+      
         return (
             <div id='UserMenu'>
                 {
@@ -94,6 +100,13 @@ class UserMenuMore extends React.Component {
         {
             icon: "icon-gerenziliao",
             text: "个人资料",
+            clickHandler:()=>{
+                this.props.jump('/Self');
+                this.props.hideCard();
+            },
+            style:{
+                cursor:'pointer'
+            }
         },
         {
             icon: "icon-dark-full",
@@ -107,7 +120,7 @@ class UserMenuMore extends React.Component {
     render() {
         return this.list.map((val, i) => {
             return (
-                <div className='listMenu' key={i}>
+                <div className='listMenu' key={i} style={val.style} onClick={val.clickHandler?val.clickHandler:null}>
                     <i className={`iconfont ${val.icon} listIcon`}></i>
                     <span className='listText'>{val.text}</span>
                 </div>

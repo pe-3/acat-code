@@ -5,7 +5,16 @@ import './icon.css'
 import App from './component/App/App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
+import 'element-theme-default';
+
 axios.defaults.baseURL = "http://192.168.2.120:10010/"; 
+if(localStorage.getItem('token')){
+    let token = localStorage.getItem('token');
+    axios.interceptors.request.use(config => {
+    config.headers.Token =token;
+    return config;
+})
+}
 React.Component.prototype.axios = axios;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

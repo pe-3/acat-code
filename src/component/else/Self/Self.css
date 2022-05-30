@@ -1,0 +1,51 @@
+.Self{
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    min-height: 707px;
+    padding: 0 150px;
+    box-sizing: border-box;
+    
+}
+
+.MenuWrapper,
+.infoWrapper,
+.elseWrapper{
+    height: 100%;
+    flex: 1.4;
+}
+
+.infoWrapper{
+    flex: 4;
+    margin:0 20px;
+    background: rgba(255,255,255, 1);
+    padding: 16px 20px 24px;
+    border-radius: 8px ;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 4%) 0px 1px 3px, rgb(0 0 0 / 12%) 0px 6px 16px;
+}
+
+.font-doc{
+    width: 24px;
+    height: 24px;
+    color: rgba(0,122,255, 1);
+    margin-right: 4px;
+}
+
+.font-doc>span{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: rgba(38,38,38, 1);
+}
+
+.top-title{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px -10px;
+    padding: 0px 20px 14px;
+    border-bottom: 1px solid rgba(240,240,240, 1);
+    box-sizing: border-box;
+    padding-top: 6px;
+}

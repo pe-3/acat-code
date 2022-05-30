@@ -1,0 +1,76 @@
+.Skills{
+    background-color: #fff;
+    overflow: hidden;
+    height: 255px;
+    width: 100%;
+    padding: 0 20px;
+    margin-left: -20px;
+    position: relative;
+}
+
+.Skills:hover{
+    background-color: #f3f6fb;
+}
+.Skills:hover .css-bdk8zz-BaseButtonComponent-Button{
+    display: inline-flex;
+}
+.Skills-title{
+    font-size: 18px;
+    line-height: 32px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    color: rgba(38,38,38, 1);
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    margin: 16px;
+}
+
+.css-7yjanw-Title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(38,38,38, 1);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-left: 32px;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.css-1kcznup-LinkWrap {
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-left: 31px;
+    color: rgba(60,60,67,0.6);
+}
+
+.css-1q2wjfz-BasicTag {
+    user-select: none;
+    font-size: 12px;
+    line-height: 20px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+    white-space: nowrap;
+    padding: 4px 8px;
+    min-width: 48px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    background: rgba(0,10,32,0.05);
+    color: rgba(38,38,38, 1);
+    margin-right: 16px;
+}
+.css-1q2wjfz-BasicTag:nth-child(1){
+    margin-left: 31px;
+}

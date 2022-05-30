@@ -1,8 +1,9 @@
 import Index from "../Index/Index";
 import Learn from "../Learn/Learn";
-import Qlist from "../Qlist/Qlist";
+import Qall from "../Qlist/Qall";
 import Disscuss from "../Disscuss/Disscuss";
 import Competition from "../Competiton/Competition";
+import Self from "../Self/Self";
 const routes = [
     {
         path:"/",
@@ -14,7 +15,7 @@ const routes = [
     },
     {
         path:"/Qlist",
-        element:<Qlist/>,
+        element:<Qall/>,
     },
     {
         path:"/Disscuss",
@@ -24,5 +25,9 @@ const routes = [
         path:"/Competition",
         element:<Competition/>,
     },
+    {
+        path:"/Self",
+        element:<Self/>,
+    }
 ]
 export default routes

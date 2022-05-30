@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { ReInput, ReButton } from '../formEle/formEle'
 import Verify from '../verifyCode/Verify';
@@ -95,8 +96,8 @@ class LogCard extends React.Component {
     state = {
         mail: "",
         code: "",
-        user: "",
-        pass: "",
+        user: "like_gang",
+        pass: "147258",
         selectVal: "@qq.com",
     }
     sendMailCode = () => {
@@ -133,12 +134,28 @@ class LogCard extends React.Component {
         if (!user || !pass) {
             return alert('请填写完整表单');
         }
-        alert(
-            `
-                账户：${user}
-                密码：${pass}
-            `
-        )
+        axios({
+            url: "/login",
+            params: {
+                account: user,
+                password: pass,
+            },
+            withCredentials: false,
+        }).then((res) => {
+            let { token } = res.data;
+            localStorage.setItem('token',token);
+            this.axios.interceptors.request.use(config => {
+                config.headers.Token =token;
+                return config;
+            })
+            if (res.data.code === 200) {
+                axios({
+                    url: "/user",
+                }).then(res => {
+                    console.log(res.data)
+                })
+            }
+        })
     }
     sign = () => {
         let { mail, code } = this.state;
@@ -153,7 +170,7 @@ class LogCard extends React.Component {
                 tp_code: code,
             }
         }).then(res => {
-            let {message} = res.data;
+            let { message } = res.data;
             alert(message);
         })
     }

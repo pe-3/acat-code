@@ -1,0 +1,13 @@
+.q-page{
+    display: flex;
+}
+
+.q-page-left,
+.q-page-right{
+    height: 100%;
+    flex: 3;    
+}
+
+.q-page-right{
+    flex: 1;
+}

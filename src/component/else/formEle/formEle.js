@@ -113,12 +113,13 @@ class ReButton extends React.Component {
             console.log('被点击了');
         },
         className:'',
+        children:'',
     }
     render() {
-        let { style, content, handler, className } = this.props;
+        let { style, content, handler, className ,children} = this.props;
         return (
             <div className={`re-button ${className}`} onClick={handler} style={style} >
-                {content}
+                {children?children:content}
             </div>
         )
     }
