@@ -11,3 +11,7 @@
 .q-page-right{
     flex: 1;
 }
+
+.q-page-right{
+    box-sizing: border-box;
+}

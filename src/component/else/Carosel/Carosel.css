@@ -1,0 +1,19 @@
+.Carosel{
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    margin: 16px 0;
+    scroll-behavior: smooth;
+}
+
+.Carosel::-webkit-scrollbar{
+    width: 0;
+}
+
+.Carosel>img{
+    height: 100%;
+    margin-right: 20px;
+    width: 31%;
+    border-radius: 10px;
+   
+}

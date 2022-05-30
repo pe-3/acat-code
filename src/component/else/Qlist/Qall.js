@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Qlist  from './Qlist'
 import './Qall.css'
 import Recommend from './Recommend/Recommend'
+import Calendar from './Calendar/Calendar'
 export default class Qall extends Component {
   render() {
     return (
@@ -11,7 +12,7 @@ export default class Qall extends Component {
               <Qlist/>
           </div>
           <div className="q-page-right">
-
+              <Calendar/>
           </div>
       </div>
     )
