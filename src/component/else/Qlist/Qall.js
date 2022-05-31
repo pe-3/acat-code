@@ -10,7 +10,7 @@ export default class Qall extends Component {
           <div className="q-page-left">
               <Recommend/>
               <Qlist/>
-              {/* good */}
+              {/* good s*/}
           </div>
           <div className="q-page-right">
               <Calendar/>
