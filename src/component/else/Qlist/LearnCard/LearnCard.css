@@ -1,0 +1,104 @@
+.space-y-4>:not([hidden])~:not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.shadow-fixed-green, .shadow-level1 {
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+}
+.shadow-level1 {
+    --tw-shadow: 0px 1px 3px rgba(0,0,0,.04),0px 2px 8px rgba(0,0,0,.08);
+    --tw-shadow-colored: 0px 1px 3px var(--tw-shadow-color),0px 2px 8px var(--tw-shadow-color);
+}
+.p-\[10px\] {
+    padding: 10px;
+}
+.bg-layer-1, .bg-paper {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+}
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+.items-center {
+    align-items: center;
+}
+.h-\[60px\] {
+    height: 60px;
+}
+.flex {
+    display: flex;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+[role=button], a, area, button, input:not([type=range]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+.LearnCard{
+    color: #1890ff;
+    text-decoration: none;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s;
+    -webkit-text-decoration-skip: objects;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.w-10 {
+    width: 2.5rem;
+}
+.h-10 {
+    height: 2.5rem;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+.pl-\[13px\] {
+    padding-left: 13px;
+}
+
+.text-label-1 {
+    --tw-text-opacity: 1;
+    color: rgb(38 38 38/var(--tw-text-opacity));
+}
+.font-medium {
+    font-weight: 500;
+}
+
+.text-label-3 {
+    color: rgba(60,60,67,.6);
+}
+.text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
+}
+.mt-\[2px\] {
+    margin-top: 2px;
+}
+
+.LearnCard{
+    font-size: 14px;
+    height: 3em;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+.text-label-2 {
+    color: rgba(38,38,38,.75);
+}
+.h-4 {
+    height: 1rem;
+}
+.ml-auto {
+    margin-left: auto;
+}
+
+.LearnCard:hover{
+    background-color: rgba(200,200,200,0.5);
+}
