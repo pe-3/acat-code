@@ -1,0 +1,43 @@
+.DisItem{
+    background: rgba(255,255,255, 1);
+    display: block;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0,10,32,0.05),0 2px 8px rgba(0,10,32,0.05);
+    transition: box-shadow 0.3s ease-in-out 0s;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.css-15aa6sn-OperationLink {
+    color: rgba(140,140,140, 1);
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.css-1jk16lb-BaseButtonComponent-OperationButton-CompactOperationButton {
+    border: none;
+    border-radius: 3px;
+    line-height: 20px;
+    outline: none;
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition-property: color, box-shadow, background-color, opacity;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 1;
+    background-color: transparent;
+    padding: 0px;
+    color: rgba(140,140,140, 1);
+    font-size: 14px;
+    margin: 0px 10px;
+}

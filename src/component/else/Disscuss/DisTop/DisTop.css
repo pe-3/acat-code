@@ -1,0 +1,29 @@
+.DisTop {
+    display: flex;
+}
+
+#btn-post {
+    background-color: #67C23A;
+    color: white;
+}
+
+.my_layout {
+    flex: 1;
+    margin: 0 100px;
+}
+
+#my_menu {
+    height: 32px;
+    line-height: 32px;
+    background-color: transparent;
+}
+
+.css-1kr0d8-Dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: rgba(229, 229, 229, 1);
+    margin: 0px 6px;
+    display: inline-block;
+    vertical-align: middle;
+}

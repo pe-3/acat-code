@@ -1,0 +1,15 @@
+.Learn{
+    display: flex;
+}
+
+.learn_left{
+    flex: 1;
+}
+
+.learn_right{
+    flex: 5;
+    background-color: #fff;
+    margin-left: 1px;
+    margin-top: -18px;
+}
+

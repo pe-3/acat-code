@@ -1,0 +1,25 @@
+.LikeWithAnimation {
+    font-size: 14px;
+    color: rgba(140, 140, 140, 1);
+    padding-left: 4px;
+    user-select: none;
+    display: inline-block;
+}
+
+.likeIcon {
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+    padding: 4px;
+    margin-right: 4px;
+    width: 1.6em;
+    height: 1.6em;
+    display: inline-grid;
+    place-content: center;
+    box-sizing: border-box;
+}
+
+.myLikeIcon {
+    background-image:linear-gradient(90deg, #FAA500 6.4%, #FF7A00 94.09%);
+    -webkit-background-clip:text;     
+    -webkit-text-fill-color:transparent;
+}

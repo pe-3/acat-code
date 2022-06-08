@@ -6,7 +6,8 @@ import App from './component/App/App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 import 'element-theme-default';
-
+import * as echarts from 'echarts';
+import 'antd/dist/antd.css';
 axios.defaults.baseURL = "http://192.168.2.120:10010/"; 
 if(localStorage.getItem('token')){
     let token = localStorage.getItem('token');
@@ -16,6 +17,7 @@ if(localStorage.getItem('token')){
 })
 }
 React.Component.prototype.axios = axios;
+React.Component.prototype.echarts = echarts;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

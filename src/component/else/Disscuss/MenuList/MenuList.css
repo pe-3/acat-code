@@ -1,0 +1,21 @@
+.MenuList{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(38,38,38,.75);
+    font-size: 13px;
+    height: 60px;
+    align-content: center;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.MenuList>div{
+    flex: 1;
+    cursor: pointer;
+}
+
+.MenuList>div>p{
+    text-align: center;
+    margin-bottom: unset;
+}
+

@@ -1,0 +1,19 @@
+.Today{
+    height: 100%;
+    padding: 20px;
+    background-image: url(../../../../assets/img/TodayBackPic/220407-14886362479c7b.jpeg);
+    color: white;
+    position: relative;
+}
+
+.Today_top{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+#darkBtn{
+    background-color: rgba(38,38,38,.6);
+    color: white;
+}

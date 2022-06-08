@@ -10,12 +10,15 @@ export default class Calendar extends Component {
         'Fri',
         'Sat',
     ]
+    date = new Date();
     state = {
         month: this.getMonth(),
         days: [],
         firstDays: [],
         canNext:0,
         year:this.getYear(),
+        todayDate:this.date.getDate(),
+        todayMonth:this.date.getMonth(),
     }
     getDayFirst() {
         let year = this.getYear();
@@ -130,7 +133,7 @@ export default class Calendar extends Component {
                     }
                     {
                         this.state.days.map((val, i) => {
-                            return <span key={i}>{val}</span>
+                            return <span key={i} className={i === this.state.todayDate - 1 && this.state.month === this.state.todayMonth?'todayTag':''}>{val}</span>
                         })
                     }
                 </div>

@@ -1,0 +1,12 @@
+.Disscuss {
+    display: flex;
+    min-height: 100vh;
+}
+
+.dis-left-part {
+    flex: 3;
+}
+
+.dis-right-part {
+    flex: 1;
+}

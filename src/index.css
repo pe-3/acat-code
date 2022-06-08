@@ -482,3 +482,8 @@ body {
   padding-bottom: 50px;
   background-color: #f7f8fa;
 }
+
+.my_gap{
+  margin:0 5px;
+  display: inline;
+}

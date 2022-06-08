@@ -229,3 +229,12 @@ button, button:focus {
 .calender-content>span:hover{
     background-color: rgba(200,200,200,.4);
 }
+
+.todayTag{
+    background-color: rgb(45, 181, 93);
+    color: white;
+}
+
+.todayTag:hover{
+    background-color: rgba(39, 150, 78) !important;
+}

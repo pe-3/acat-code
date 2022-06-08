@@ -1,4 +1,5 @@
 import React from 'react';
+import './reSelect.css'
 class ReSelect extends React.Component {
     static defaultProps = {
         type: 'sub',
@@ -19,8 +20,9 @@ class ReSelect extends React.Component {
     }
     state = {
         showDrop: false,
-        selectVal: '@qq.com'
+        selectVal: this.props.default,
     }
+    
     render() {
         let { type, hasBorder, placeholder, data, selectVal, changeSelect,className } = this.props;
         let { showDrop } = this.state;
@@ -30,7 +32,7 @@ class ReSelect extends React.Component {
         return (
             <div className={`${type}-select re-select ${className}`}>
                 <div onClick={() => { this.setState({ showDrop: !showDrop }) }}>
-                    {selectVal ? selectVal : placeholder} <i className="icon-xiajiantou iconfont"></i>
+                    <span className='re-select-val'>{selectVal ? selectVal : placeholder}</span><i className="icon-xiajiantou iconfont"></i>
                 </div>
                 {showDrop ? <div className='select-drop-down'>
                     {data.map((val, index) => {

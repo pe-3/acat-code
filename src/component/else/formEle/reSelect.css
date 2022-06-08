@@ -1,0 +1,30 @@
+.selectItem>span{
+    width: 100%;
+    display: inline-block;
+}
+.selectItem{
+    text-align: left;
+}
+.select-drop-down{
+    width: max-content;
+}
+
+.re-select-val{
+    display: inline-block;
+    padding-right: 5px;
+    max-width: 4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.selectItem>span{
+    margin-right: 10px;
+}
+
+.re-select{
+    max-width: 200px;
+    padding: 4px 0;
+    height: unset;
+}
