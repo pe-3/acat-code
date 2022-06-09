@@ -13,10 +13,17 @@ export default class SingleTask extends Component {
             this.setState({
                 [prop]: isSelected,
             })
-            if(this.props.onPropChange){
-                this.props.onPropChange(prop,isSelected);
+            if (this.props.onPropChange) {
+                this.props.onPropChange(prop, isSelected);
             }
         }
+    }
+    componentDidMount() {
+        let { isFinished, isImportant } = this.props;
+        this.setState({
+            isFinished,
+            isImportant
+        })
     }
     static defaultProps = {
         title: '好好睡觉',
@@ -26,7 +33,7 @@ export default class SingleTask extends Component {
         let { title, type } = this.props;
         return (
             <div className='SingleTask'>
-                <SelectRadio onSelectChange={this.selectChangeHandler('isFinished')} />
+                <SelectRadio onSelectChange={this.selectChangeHandler('isFinished')} isSelected={this.props.isFinished} />
                 <MyGap gap={10} />
                 <div className='task_info' >
                     <div className='task_title' style={this.state.isFinished ? {
@@ -35,7 +42,7 @@ export default class SingleTask extends Component {
                     } : {}}>{title}</div>
                     <div className='task_type'>{type}</div>
                 </div>
-                <SelectImportant onSelectChange={this.selectChangeHandler('isImportant')} style={{
+                <SelectImportant onSelectChange={this.selectChangeHandler('isImportant')} isSelected={this.props.isImportant} style={{
                     position: 'absolute',
                     right: '20px',
                     borderRadius: '5px',

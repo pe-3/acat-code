@@ -4,6 +4,8 @@
     background-image: url(../../../../assets/img/TodayBackPic/220407-14886362479c7b.jpeg);
     color: white;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .Today_top{
