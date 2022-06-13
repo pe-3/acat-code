@@ -9,6 +9,10 @@ import Today from '../Learn/Today/Today'
 import Important from '../Learn/Important/Important'
 import Plan from '../Learn/Plan/Plan'
 import Distributed from '../Learn/Distributed/Distributed'
+import QDetail from "../QDetail/QDetail";
+import QDescribe from "../QDetail/QDescribe/QDescribe";
+import Qcomment from "../QDetail/Qcomment/Qcomment";
+import Qhistory from "../QDetail/Qhistory/Qhistory";
 
 const routes = [
     {
@@ -56,6 +60,24 @@ const routes = [
     {
         path: "/Self",
         element: <Self />,
+    },
+    {
+        path: "/QDetail",
+        element: <QDetail/>,
+        children:[
+            {
+                path:'QDescribe',
+                element:<QDescribe/>
+            },
+            {
+                path:'Qcomment',
+                element:<Qcomment/>
+            },
+            {
+                path:'Qhistory',
+                element:<Qhistory/>
+            }
+        ],
     }
 ]
 export default routes

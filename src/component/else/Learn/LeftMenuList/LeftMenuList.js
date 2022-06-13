@@ -36,15 +36,12 @@ class MenuList extends Component {
     ]
     render() {
         return (
-            <div className='LeftMenuList'>
+            <div className='LeftMenuList menu_back'>
                 <Search placeholder='搜索计划' />
                 <MyGap isVertical />
-                <Menu items={this.items} defaultSelectedKeys={'Today'} style={{ borderRight: 'none' }} onSelect={(arg) => {
-                    
+                <Menu items={this.items} defaultSelectedKeys={this.props.pathname.split("/")[2]} style={{ borderRight: 'none',background:'transparent', }} onSelect={(arg) => {
                     this.props.jump('/Learn/' + arg.key);
                 }} />
-                <Divider />
-                <NewList />
             </div>
         )
     }

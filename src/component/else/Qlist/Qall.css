@@ -1,5 +1,7 @@
 .q-page{
     display: flex;
+    padding-top: 20px;
+    padding-bottom:20px;
 }
 
 .q-page-left,
@@ -15,3 +17,4 @@
 .q-page-right{
     box-sizing: border-box;
 }
+

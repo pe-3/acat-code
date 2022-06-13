@@ -69,14 +69,14 @@ export default class Tasks extends Component {
                         }} />
                     })
                 }
-                <div className="pos_bottom" style={{ width: "97%", }} >
+                {!this.props.hideInput ? <div className="pos_bottom" style={{ width: "97%", }} >
                     <Input onPressEnter={(e) => {
                         this.push(this.TaskItem(e.target.value, '任务', this.state.length));
                         setTimeout(() => {
                             e.target.value = null;
                         }, 0);
-                    }} prefix={<PlusOutlined style={{ color: 'white' }} />} size='large' placeholder='添加任务' id='addTask' style={{ background: 'rgba(38,38,38,.6)' }} />
-                </div>
+                    }} prefix={<PlusOutlined style={{ color: this.props.inputiconColor ? this.props.inputiconColor : 'white' }} />} size='large' placeholder='添加任务' id={this.props.inputid ? this.props.inputid : 'addTask'} style={{ backgroundColor: this.props.inputcolor ? this.props.inputcolor : 'rgba(38,38,38,.6)' }} />
+                </div> : ''}
             </div>
 
         )

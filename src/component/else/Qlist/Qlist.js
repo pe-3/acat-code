@@ -1,5 +1,6 @@
 import React from "react";
 import { ReButton, ReInput, ReSelect } from '../formEle/formEle'
+import { useNavigate, useLocation } from "react-router-dom";
 import './this.css'
 class Question extends React.Component {
     static defaultProps = {
@@ -10,13 +11,13 @@ class Question extends React.Component {
         difficulty: "简单",
     }
     render() {
-        let { state, title, answerNum, difficulty, passPossible } = this.props;
+        let { state, title, answerNum, difficulty, passPossible, index } = this.props;
         return (
             <div className="singleQue" style={{
                 paddingRight: '10px'
             }}>
                 <span>{state}</span>
-                <span>{title}</span>
+                <span style={{ cursor: 'pointer' }} onClick={() => { this.props.jump('/QDetail/QDescribe?index=' + index) }}>{index + '.' + title}</span>
                 <span>{answerNum}</span>
                 <span>{passPossible}</span>
                 <span>{difficulty}</span>
@@ -24,6 +25,18 @@ class Question extends React.Component {
         )
     }
 }
+
+function QueWithRouter(props) {
+    let history = useNavigate();
+    let jump = (path) => {
+        history(path);
+    }
+    let location = useLocation();
+    return (
+        <Question jump={jump} location={location} {...props} />
+    )
+}
+
 class Qlist extends React.Component {
     state = {
         topic: '',
@@ -39,6 +52,21 @@ class Qlist extends React.Component {
         }
     }
     list = [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
         {},
         {},
         {},
@@ -124,7 +152,7 @@ class Qlist extends React.Component {
                 </div>
                 {
                     this.list.map((val, i) => {
-                        return <Question {...val} key={i} />
+                        return <QueWithRouter {...val} index={i + 1} key={i} />
                     })
                 }
             </div>

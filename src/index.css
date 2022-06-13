@@ -24,7 +24,7 @@ em {
   width: 100vw;
   box-sizing: border-box;
   padding: 0 150px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .MenuList {
@@ -478,7 +478,7 @@ input {
 body {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-bottom: 50px;
   background-color: #f7f8fa;
 }
@@ -486,4 +486,8 @@ body {
 .my_gap{
   margin:0 5px;
   display: inline;
+}
+
+.markdown-html>ul{
+  margin-left: 20px;
 }

@@ -1,0 +1,17 @@
+.Important{
+    background-image: url(../../../../assets/img/TodayBackPic/截屏2022-06-09\ 15.16.40.png);
+}
+
+#pink{
+    background-color: #Fdd4d8;
+    color: #b34869;
+    font-size:14px;
+    padding-left: 5px;
+}
+
+#pink::placeholder{
+    color: #b34869;
+    font-size:14px;
+    padding-left: 5px;
+}
+

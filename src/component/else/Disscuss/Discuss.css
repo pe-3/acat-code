@@ -1,6 +1,8 @@
 .Disscuss {
     display: flex;
     min-height: 100vh;
+    padding-top: 20px;
+    padding-bottom:20px;
 }
 
 .dis-left-part {

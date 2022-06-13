@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './icon.css'
@@ -8,16 +8,20 @@ import axios from 'axios';
 import 'element-theme-default';
 import * as echarts from 'echarts';
 import 'antd/dist/antd.css';
-axios.defaults.baseURL = "http://192.168.2.120:10010/"; 
-if(localStorage.getItem('token')){
-    let token = localStorage.getItem('token');
-    axios.interceptors.request.use(config => {
-    config.headers.Token =token;
+
+
+axios.defaults.baseURL = "http://192.168.2.120:10010/";
+if (localStorage.getItem('token')) {
+  let token = localStorage.getItem('token');
+  axios.interceptors.request.use(config => {
+    config.headers.Token = token;
     return config;
-})
+  })
 }
-React.Component.prototype.axios = axios;
-React.Component.prototype.echarts = echarts;
+Component.prototype.axios = axios;
+Component.prototype.echarts = echarts;
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

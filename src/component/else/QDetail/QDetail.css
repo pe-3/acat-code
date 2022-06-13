@@ -1,0 +1,16 @@
+.QDetail {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.QDetail>div {
+    flex: 1;
+}
+
+.Set {
+    cursor: pointer;
+}
+
+.Set:hover {
+    color: white;
+}

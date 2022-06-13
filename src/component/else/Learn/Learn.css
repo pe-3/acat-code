@@ -4,11 +4,11 @@
 
 .learn_left {
     flex: 1;
+    padding-top: 15px;
 }
 
 .learn_right {
     flex: 5;
     background-color: #fff;
     margin-left: 1px;
-    margin-top: -18px;
 }

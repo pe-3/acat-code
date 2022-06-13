@@ -16,10 +16,6 @@ class MenuList extends React.Component {
             content: '讨论',
             path: '/Disscuss',
         },
-        {
-            content: '竞赛',
-            path: '/competition',
-        },
     ]
 
 

@@ -1,0 +1,21 @@
+.QlistInner_head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.SingleInnerQ{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding:4px 14px;
+}
+
+.SingleInnerQ:hover{
+    background-color: rgba(240,240,240,.1);
+}
+
+.QlistInner_content{
+    max-height: calc(100vh - 52px - 24px - 24px);
+    overflow: auto;
+}
