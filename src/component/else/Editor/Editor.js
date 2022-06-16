@@ -9,8 +9,8 @@ export default class Editor extends Component {
                 <CodeMirror
                     style={this.props.style}
                     value={this.props.code}
-                    height="calc(100vh - 96px - 46px)"
-                    extensions={[javascript({ jsx: true })]}
+                    height={this.props.height ? this.props.height : "calc(100vh - 96px - 46px)"}
+                    extensions={this.props.extensions ? this.props.extensions : [javascript({ jsx: true })]}
                     onChange={this.props.codeChange}
                     theme={this.props.themeDark ? oneDark : undefined}
                 />

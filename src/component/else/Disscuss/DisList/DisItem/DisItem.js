@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './DisItem.css'
-import { Avatar, Image, Typography, Divider, Tag, Tooltip } from 'antd';
+import { Avatar, Image, Typography, Tag, Tooltip } from 'antd';
 import MyGap, { Dot } from '../../../MyGap/MyGap'
 import LikeWithAnimation from '../../../LikeWithAnimation/LikeWithAnimation';
 import { EyeIcon } from '../../../Icon/Icon';
 import { CommentOutlined, StarOutlined, EllipsisOutlined } from '@ant-design/icons'
-const { Title, Paragraph, Text, Link } = Typography;
-class DisItem extends Component {
-    state = { likeNum: 21, starNum: 10, hasStared: false }
+import { useNavigate, useLocation } from 'react-router-dom'
+const { Paragraph, Text } = Typography;
+class Item extends Component {
+    state = { likeNum: 21, starNum: 10, hasStared: false, articleIndex: '0' }
     addLike = () => {
         let { likeNum } = this.state;
         likeNum++;
@@ -37,22 +38,23 @@ class DisItem extends Component {
         })
     }
     render() {
+        let { jump } = this.props;
         return (
             <div className='DisItem'>
                 <div className="dis_item_top">
                     <Avatar size='small' src={<Image src='http://localhost:8080/static/media/logo.67674119d005acb5c9e7.jpeg' />} />
                     <MyGap />
-                    <Text strong style={{
+                    <Text onClick={() => { jump('/DisscussDetail?articleIndex=' + this.state.articleIndex) }} strong style={{
                         fontSize: '15px'
                     }}>leetcode 常见报错汇总</Text>
                 </div>
-                <div className="dis_info" >
+                <div className="dis_info" onClick={() => { jump('/DisscussDetail?articleIndex=' + this.state.articleIndex) }}>
                     <Text style={{ color: 'rgb(140,140,140)' }}>用户昵称</Text><MyGap />
                     <Text style={{ color: 'rgb(38,38,38,0.75)' }}>2022-03-31发布了文章</Text>
                     <Dot />
                     <Text style={{ color: 'rgb(38,38,38,0.75)' }}>274阅读</Text><MyGap />
                     <Tag color="green" style={{ fontSize: '12px', lineHeight: 'unset', border: "unset", }}>精选</Tag>
-                    <Typography>
+                    <Typography >
                         <Paragraph>
                             leetcode 常见报错汇总 前言 leetcode 也刷了不少题了，经常遇到各种各样的报错，最近更是在一个以前没有遇到的报错上 debug 了很久，最后才发现是测试用例的问题，故干脆怒而直接总结一下常见的报错，方便以后刷题。（我主要使用 c++，其它语言不清楚，应该也可以参考） 内存报错 leetcode 用
                         </Paragraph>
@@ -60,12 +62,12 @@ class DisItem extends Component {
                 </div>
                 <div className='dis_item_bottom'>
                     <LikeWithAnimation likeNum={this.state.likeNum} addLike={this.addLike} cancelLike={this.cancelLike} />
-                    <span className='css-15aa6sn-OperationLink'> <EyeIcon style={{
+                    <span className='css-15aa6sn-OperationLink' onClick={() => { jump('/DisscussDetail?articleIndex=' + this.state.articleIndex) }}> <EyeIcon style={{
                         fontSize: '18px',
                         marginRight: "4px",
                         marginLeft: "10px",
                     }} /> 12.3k</span>
-                    <span className='css-1jk16lb-BaseButtonComponent-OperationButton-CompactOperationButton'>
+                    <span className='css-1jk16lb-BaseButtonComponent-OperationButton-CompactOperationButton' onClick={() => { jump('/DisscussDetail?articleIndex=' + this.state.articleIndex) }}>
                         <CommentOutlined style={{
                             width: '20px',
                             height: '20px',
@@ -82,7 +84,7 @@ class DisItem extends Component {
                         }} /> {this.state.starNum}
                     </span>
                     <Tooltip className='css-15aa6sn-OperationLink' color={'white'} title={() => {
-                        return (<span onClick={()=>{alert('举报')}} style={{ color: 'rgb(38,38,38)',fontSize:'12px',cursor:'pointer' }}>举报</span>)
+                        return (<span onClick={() => { alert('举报') }} style={{ color: 'rgb(38,38,38)', fontSize: '12px', cursor: 'pointer' }}>举报</span>)
                     }} placement="right">
                         <EllipsisOutlined style={{
                             fontSize: '16px',
@@ -96,4 +98,17 @@ class DisItem extends Component {
     }
 }
 
-export default DisItem;
+export default function DisItem(props) {
+    let history = useNavigate();
+    let jump = (path) => {
+        history(path);
+    }
+    let location = useLocation();
+    let routeApi = {
+        jump,
+        location,
+    }
+    return (
+        <Item {...routeApi} {...props} />
+    )
+};

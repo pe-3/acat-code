@@ -9,7 +9,7 @@ export default class Qconsole extends Component {
     render() {
         return (
             <div className='Qconsole'>
-                <Menu items={this.menulist} theme='dark' mode='horizontal' />
+                <Menu items={this.menulist} autoSize = {false} theme='dark' mode='horizontal' defaultSelectedKeys={'example'}/>
                 <div style={{ padding: '20px' }}>
                     <TextArea  placeholder='输入测试用例' style={{height:'calc(200px - 40px - 46px)'}}/>
                 </div>

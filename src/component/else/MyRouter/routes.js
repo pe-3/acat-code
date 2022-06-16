@@ -13,11 +13,17 @@ import QDetail from "../QDetail/QDetail";
 import QDescribe from "../QDetail/QDescribe/QDescribe";
 import Qcomment from "../QDetail/Qcomment/Qcomment";
 import Qhistory from "../QDetail/Qhistory/Qhistory";
+import DiscussDetail from "../DiscussDetail/DiscussDetail";
+import EditArtical from "../EditArtical/EditArtical";
 
 const routes = [
     {
         path: "/",
         element: <Index />,
+    },
+    {
+        path: '/EditArtical',
+        element: <EditArtical />
     },
     {
         path: "/Learn",
@@ -63,21 +69,25 @@ const routes = [
     },
     {
         path: "/QDetail",
-        element: <QDetail/>,
-        children:[
+        element: <QDetail />,
+        children: [
             {
-                path:'QDescribe',
-                element:<QDescribe/>
+                path: 'QDescribe',
+                element: <QDescribe />
             },
             {
-                path:'Qcomment',
-                element:<Qcomment/>
+                path: 'Qcomment',
+                element: <Qcomment />
             },
             {
-                path:'Qhistory',
-                element:<Qhistory/>
+                path: 'Qhistory',
+                element: <Qhistory />
             }
         ],
+    },
+    {
+        path: '/DisscussDetail',
+        element: <DiscussDetail />
     }
 ]
 export default routes

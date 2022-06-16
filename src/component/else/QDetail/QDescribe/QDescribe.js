@@ -25,7 +25,7 @@ class QDescribe extends Component {
         return (
             <div>
                 <QDescribeHead />
-                <QDescribeContent />
+                <MdRender useDefault/>
                 <QDescribeBottom />
             </div>
 
@@ -48,8 +48,8 @@ function QDescribeHead() {
 }
 
 
-function QDescribeContent() {
-    const mdText =
+export function MdRender(props) {
+    let mdText =
         `
 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标
 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
@@ -86,7 +86,7 @@ function QDescribeContent() {
 
 进阶: 你可以想出一个时间复杂度小于 O(n2) 的算法吗？
 `;
-
+    let { text, useDefault } = props;
     const components = {
         code({ node, inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '');
@@ -106,6 +106,9 @@ function QDescribeContent() {
                 </code>
             );
         }
+    }
+    if (text || !useDefault) {
+        mdText = text;
     }
     return (
         <div className='md-render-wrapper'>
@@ -135,7 +138,7 @@ export function QBottom() {
                 <Button>下一题 <RightOutlined /></Button>
             </div>
             <Drawer width={500} drawerStyle={{ backgroundColor: 'rgb(38,38,38)' }} placement='left' visible={visible} onClose={() => { setVisible(false) }} closable={false} >
-                <QlistInner/>                
+                <QlistInner />
             </Drawer>
         </div>
     )

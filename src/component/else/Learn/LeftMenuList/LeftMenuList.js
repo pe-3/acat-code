@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Input, Divider, Button } from 'antd'
+import { Menu, Input, Button } from 'antd'
 import './LeftMenuList.css'
 import MyGap from '../../MyGap/MyGap'
 import { PlusOutlined, BarsOutlined, SmileOutlined, StarOutlined, ScheduleOutlined, TeamOutlined, CheckOutlined } from '@ant-design/icons'
@@ -39,7 +39,7 @@ class MenuList extends Component {
             <div className='LeftMenuList menu_back'>
                 <Search placeholder='搜索计划' />
                 <MyGap isVertical />
-                <Menu items={this.items} defaultSelectedKeys={this.props.pathname.split("/")[2]} style={{ borderRight: 'none',background:'transparent', }} onSelect={(arg) => {
+                <Menu items={this.items} defaultSelectedKeys={this.props.pathname.split("/")[2]} style={{ borderRight: 'none', background: 'transparent', }} onSelect={(arg) => {
                     this.props.jump('/Learn/' + arg.key);
                 }} />
             </div>

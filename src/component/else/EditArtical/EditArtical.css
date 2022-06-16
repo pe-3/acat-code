@@ -1,0 +1,30 @@
+.EditArtical {
+    display: flex;
+    padding-top: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.EditArtical>div {
+    flex: 1;
+}
+
+.btn-submit {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.EditArticalHead {
+    height: 50px;
+    background-color: #fff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    align-items: center;
+}
+
+.EditArticalHead>div {
+    flex: 1;
+}
