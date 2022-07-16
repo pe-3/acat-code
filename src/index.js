@@ -4,25 +4,12 @@ import './index.css';
 import './icon.css'
 import App from './component/App/App';
 import reportWebVitals from './reportWebVitals';
-import axios from 'axios';
-import 'element-theme-default';
 import * as echarts from 'echarts';
 import 'antd/dist/antd.css';
+import acat from './requests/reqs'
 
-
-axios.defaults.baseURL = "http://192.168.2.120:10010/";
-if (localStorage.getItem('token')) {
-  let token = localStorage.getItem('token');
-  axios.interceptors.request.use(config => {
-    config.headers.Token = token;
-    return config;
-  })
-}
-Component.prototype.axios = axios;
 Component.prototype.echarts = echarts;
-
-
-
+Component.prototype.acat = acat;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
